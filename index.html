@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARMYFIT | Personal Training</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="nav-logo" onclick="showPage('home')"><span>ARMYFIT</span> TRAINING</a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+      <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+      <li><a onclick="showPage('plans')" id="nav-plans">Plans</a></li>
+      <li><a onclick="showPage('contact')" id="nav-contact" class="nav-cta">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====================================================== -->
+  <!-- HOME PAGE -->
+  <!-- ====================================================== -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO 1: MAIN -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-stripe"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Elite Personal Training</p>
+        <h1 class="hero-title">
+          BUILT<br>
+          <span class="line2">DIFFERENT.</span>
+        </h1>
+        <p class="hero-sub">Stop settling for average. Train with purpose, discipline, and a coach who refuses to let you quit.</p>
+        <div class="btn-group">
+          <a class="btn-primary" onclick="showPage('plans')">View Plans</a>
+          <a class="btn-outline" onclick="showPage('about')">Meet Your Coach</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-strip">
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Clients Transformed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">96%</div>
+        <div class="stat-label">Goal Achievement Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">TRAINING THAT<br><em>ACTUALLY WORKS</em></h2>
+      <p class="section-body">Every session is built around your body, your goals, and your limits — then pushing past them.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🏋️</span>
+          <div class="service-name">Strength & Power</div>
+          <p class="service-desc">Progressive overload programming designed to build real, functional strength. Compound lifts, periodisation, and measurable results every 4 weeks.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔥</span>
+          <div class="service-name">Fat Loss & Conditioning</div>
+          <p class="service-desc">High-intensity circuits, metabolic training, and nutrition coaching that actually strips fat without burning your muscle.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🧠</span>
+          <div class="service-name">Mindset Coaching</div>
+          <p class="service-desc">The body follows the mind. Weekly check-ins, habit building, and accountability systems to keep you consistent long after motivation fades.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATION SECTION -->
+    <section>
+      <div class="transform-grid">
+        <div class="transform-image-wrap">
+          <img src="clientphoto.jpeg" class="transform-img" alt="Trainer in session">
+          <div class="red-badge">
+            <span>500+</span>
+            Lives Changed
+          </div>
+        </div>
+        <div>
+          <div class="section-tag">The Method</div>
+          <h2 class="section-title">YOUR BODY<br><em>REIMAGINED.</em></h2>
+          <p class="section-body">This isn't a cookie-cutter programme. Every client gets a personalised plan built from the ground up — assessment, nutrition, training, and recovery all aligned to one goal: yours.</p>
+          <ul class="feature-list">
+            <li>Full fitness & lifestyle assessment</li>
+            <li>Custom periodised training programme</li>
+            <li>Nutrition planning & macro guidance</li>
+            <li>Weekly progress tracking & adjustments</li>
+            <li>24/7 WhatsApp check-in support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO 2: MOTIVATIONAL STRIP -->
+    <div style="position:relative;height:320px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+      <div style="position:absolute;inset:0;background:#1a0505;
+        /* CLIENT PHOTO: Wide gym interior or outdoor training — team/energy shot */
+        background-image:url('hero-strip.jpg');background-size:cover;background-position:center;filter:brightness(0.25);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,0.6),rgba(215,35,35,0.1),rgba(8,8,8,0.6));"></div>
+      <div style="position:relative;z-index:2;text-align:center;padding:0 5%;">
+        <p style="font-size:0.75rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--red);margin-bottom:1rem;">The Only Limit</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5.5rem);letter-spacing:0.04em;line-height:1;">TRAIN HARD.<br>LIVE STRONGER.</h2>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="section-tag">Results That Speak</div>
+      <h2 class="section-title">REAL PEOPLE.<br><em>REAL RESULTS.</em></h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I lost 18kg in 5 months. But more than the weight, I gained confidence I hadn't felt in years. Best investment I've ever made in myself."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Sarah M.</div>
+              <div class="testi-role">Fat Loss Client</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"My deadlift went from 80kg to 160kg in 6 months. The programming is no joke — and the accountability keeps you showing up even when you don't want to."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">J</div>
+            <div>
+              <div class="testi-name">James T.</div>
+              <div class="testi-role">Strength Programme</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"As a 47-year-old mum of three, I thought my best days were behind me. Wrong. I'm in the best shape of my life and my kids can't keep up with me."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">L</div>
+            <div>
+              <div class="testi-name">Linda K.</div>
+              <div class="testi-role">Body Recomposition</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+      <h2 class="cta-banner-title">READY TO BEGIN<br>YOUR TRANSFORMATION?</h2>
+      <button class="cta-btn" onclick="showPage('contact')">Book a Free Consultation</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name"><span>ARMYFIT</span> TRAINING</div>
+          <p class="footer-brand-desc">Elite personal training for people who are serious about change. No excuses. No shortcuts. Just results.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('plans')">Plans</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a>sbonisosikakane1@gmail.com</a></li>
+            <li><a>+27 (0) 67 328 2474</a></li>
+            <li><a>Johannesburg, SA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Armyfit Training. All rights reserved.</span>
+        <span>Built for champions.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- ABOUT PAGE -->
+  <!-- ====================================================== -->
+  <div class="page" id="page-about">
+
+    <div class="page-hero">
+      <div class="page-hero-bg" style="
+        /* CLIENT PHOTO: Gym interior, wide shot — weights, equipment, dramatic lighting */
+        background-image: url('about-hero.jpg');
+      "></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <div class="page-hero-tag">The Coach</div>
+        <h1 class="page-hero-title">ABOUT<br><span style="color:var(--red)">ARMYFIT.</span></h1>
+      </div>
+    </div>
+
+    <section class="about-intro">
+      <div class="about-img-wrap">
+        <div class="about-accent"></div>
+        <img src="about-trainer.jpeg" class="about-img" alt="Trainer Portrait">
+        <div class="about-accent-br"></div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">My Story</div>
+        <h2>FROM THE GYM FLOOR TO <em style="color:var(--red)">YOUR GOALS.</em></h2>
+        <p>I've spent over 8 years working with everyone from first-time gym-goers to competitive athletes. What I've learned is this: the body is always capable of more than the mind believes — and my job is to bridge that gap.</p>
+        <p>I started training because I needed it myself. I was overweight, underconfident, and frustrated with every programme that promised the world and delivered nothing. So I studied obsessively, got certified, and built a method that actually works — one that respects your individuality while refusing to accept your excuses.</p>
+        <p>Every client who walks through the door gets the same treatment: total commitment, radical honesty, and a plan that fits their real life. That's the ArmyFit standard.</p>
+        <div class="cert-list">
+          <span class="cert-tag">NASM Certified</span>
+          <span class="cert-tag">Precision Nutrition L1</span>
+          <span class="cert-tag">CSCS</span>
+          <span class="cert-tag">First Aid Certified</span>
+          <span class="cert-tag">Functional Movement Specialist</span>
+          <span class="cert-tag">Kettlebell Instructor</span>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--black-2)">
+      <div class="section-tag">What Drives Me</div>
+      <h2 class="section-title">THE VALUES<br><em>BEHIND THE WORK.</em></h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-num">01</div>
+          <div class="value-name">Accountability</div>
+          <p class="value-desc">I show up for you every session, and I expect the same. Consistency is the only magic pill that exists.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">02</div>
+          <div class="value-name">Honesty</div>
+          <p class="value-desc">You'll never get empty compliments here. You'll get the truth, delivered with respect, so you can improve.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">03</div>
+          <div class="value-name">Personalisation</div>
+          <p class="value-desc">No two bodies are the same. Your plan is built for you, not copied from someone else's transformation.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">04</div>
+          <div class="value-name">Long-term Thinking</div>
+          <p class="value-desc">I'm not interested in quick fixes that fade. I build habits and knowledge so you stay in shape for life.</p>
+        </div>
+      </div>
+    </section>
+    <div class="cta-banner">
+      <h2 class="cta-banner-title">MEET ME IN PERSON.<br>LET'S TALK GOALS.</h2>
+      <button class="cta-btn" onclick="showPage('contact')">Book Free Consultation</button>
+    </div>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name"><span>ARMYFIT</span> TRAINING</div>
+          <p class="footer-brand-desc">Elite personal training for people who are serious about change.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('plans')">Plans</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a>sbonisosikakane1@gmail.com</a></li>
+            <li><a>+27(0) 67 328 2474</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Armyfit Training.</span><span>Built for champions.</span></div>
+    </footer>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- PLANS PAGE -->
+  <!-- ====================================================== -->
+  <div class="page" id="page-plans">
+
+    <div class="page-hero">
+      <div class="page-hero-bg" style="
+        /* CLIENT PHOTO: Focused close-up — hands on barbell, chalk, determination */
+        background-image: url('plans-hero.jpg');
+      "></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <div class="page-hero-tag">Invest in Yourself</div>
+        <h1 class="page-hero-title">TRAINING<br><span style="color:var(--red)">PLANS.</span></h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="plans-intro">
+        <div class="section-tag">Choose Your Path</div>
+        <h2 class="section-title">EVERY LEVEL.<br><em>EVERY GOAL.</em></h2>
+        <p class="section-body" style="text-align:center;margin:0 auto">Pick the plan that fits where you are right now. You can always upgrade as you grow. All plans include a free initial consultation.</p>
+      </div>
+
+      <div class="plans-grid">
+        
+        <!-- STARTER -->
+        <div class="plan-card">
+          <div class="plan-name">Starter</div>
+          <p class="plan-tagline">Get the foundation right</p>
+          <div class="plan-price"><sub>R</sub>1,499<span>/mo</span></div>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li>4 x 60-min sessions per month</li>
+            <li>Initial fitness assessment</li>
+            <li>Basic training programme</li>
+            <li>Nutrition guidelines PDF</li>
+            <li>Email support (48hr response)</li>
+          </ul>
+          <button class="plan-btn plan-btn-outline" onclick="showPage('contact')">Get Started</button>
+        </div>
+
+        <!-- ELITE — FEATURED -->
+        <div class="plan-card featured">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-name">Elite</div>
+          <p class="plan-tagline" style="opacity:0.75">The full transformation experience</p>
+          <div class="plan-price"><sub>R</sub>3,299<span>/mo</span></div>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li>12 x 60-min sessions per month</li>
+            <li>Full body composition assessment</li>
+            <li>Custom periodised programme</li>
+            <li>Full macro & meal planning</li>
+            <li>WhatsApp support (same-day)</li>
+            <li>Weekly progress check-ins</li>
+            <li>Monthly programme review</li>
+          </ul>
+          <button class="plan-btn plan-btn-primary" onclick="showPage('contact')">Get Started</button>
+        </div>
+
+        <!-- ONLINE -->
+        <div class="plan-card">
+          <div class="plan-name">Online</div>
+          <p class="plan-tagline">Train anywhere, anytime</p>
+          <div class="plan-price"><sub>R</sub>899<span>/mo</span></div>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li>Custom training programme</li>
+            <li>Video form reviews (2x/month)</li>
+            <li>Nutrition coaching & tracking</li>
+            <li>Monthly video call check-in</li>
+            <li>Private client app access</li>
+            <li>WhatsApp support</li>
+          </ul>
+          <button class="plan-btn plan-btn-outline" onclick="showPage('contact')">Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-addons">
+      <div class="section-tag">Enhance Your Programme</div>
+      <h2 class="section-title">ADD-ON<br><em>SERVICES.</em></h2>
+      <div class="addons-grid">
+        <div class="addon-card">
+          <span style="font-size:1.8rem">🥗</span>
+          <div class="addon-name">Meal Plan</div>
+          <div class="addon-price">R499 / month</div>
+          <p class="addon-desc">Full 7-day meal plans, adjusted weekly based on your progress and preferences. No guesswork, just eat.</p>
+        </div>
+        <div class="addon-card">
+          <span style="font-size:1.8rem">🧘</span>
+          <div class="addon-name">Recovery Session</div>
+          <div class="addon-price">R350 / session</div>
+          <p class="addon-desc">Mobility, stretching, foam rolling, and soft-tissue work. Train harder by recovering smarter.</p>
+        </div>
+        <div class="addon-card">
+          <span style="font-size:1.8rem">📊</span>
+          <div class="addon-name">Body Composition Scan</div>
+          <div class="addon-price">R250 / scan</div>
+          <p class="addon-desc">DEXA-equivalent InBody scan to track muscle mass, fat percentage, and water retention with precision.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="text-align:center;padding:5rem 5%;">
+      <div class="section-tag">Not Sure Where to Start?</div>
+      <h2 class="section-title" style="margin-bottom:1.5rem">LET'S FIGURE IT<br><em>OUT TOGETHER.</em></h2>
+      <p style="color:rgba(242,242,242,0.55);font-size:0.95rem;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto">A free 30-minute consultation — no hard sell, no commitment. Just an honest conversation about your goals and what it takes to reach them.</p>
+      <button class="btn-primary" onclick="showPage('contact')">Book Your Free Consult</button>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name"><span>ARMYFIT</span> TRAINING</div>
+          <p class="footer-brand-desc">Elite personal training for people who are serious about change.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('plans')">Plans</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a>sbonisosikakane1@gmail.com</a></li>
+            <li><a>+27(0) 67 328 2474</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 ArmyFit Training.</span><span>Built for champions.</span></div>
+    </footer>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- CONTACT PAGE -->
+  <!-- ====================================================== -->
+
+  <div class="page" id="page-contact">
+
+    <div class="page-hero">
+      <div class="page-hero-bg" style="
+        /* CLIENT PHOTO: Trainer smiling / approachable — gym counter or outdoor */
+        background-image: url('contact-hero.jpg');
+      "></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <div class="page-hero-tag">Let's Talk</div>
+        <h1 class="page-hero-title">GET IN<br><span style="color:var(--red)">TOUCH.</span></h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>YOUR TRANSFORMATION<br><em style="color:var(--red)">STARTS HERE.</em></h2>
+          <p>Whether you're ready to commit or just have questions — reach out. The first conversation is always free and there's zero pressure. Fill in the form and I'll be in touch within 24 hours.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-item-title">Location</div>
+                <div class="contact-item-val">Gauteng, Johannesburg, Westgate</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-item-title">Phone / WhatsApp</div>
+                <div class="contact-item-val">+27 (0) 67 328 2474</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-item-title">Email</div>
+                <div class="contact-item-val">sbonisosikakane1@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-item-title">Hours</div>
+                <div class="contact-item-val">Mon–Fri: 05:00–19:00<br>Sat-Sun: 07:00–14:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+         <div class="section-tag">Send a Message</div>
+
+<form 
+  action= "https://formspree.io/f/mlgazqkn"
+  method="POST" 
+  class="contact-form" 
+  id="contact-form"
+>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">First Name</label>
+      <input type="text" class="form-input" name="firstName" placeholder="John" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Last Name</label>
+      <input type="text" class="form-input" name="lastName" placeholder="Smith" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Email Address</label>
+    <input type="email" class="form-input" name="email" placeholder="john@email.com" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Phone / WhatsApp</label>
+    <input type="tel" class="form-input" name="phone" placeholder="+27 71 000 0000">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">I'm Interested In</label>
+    <select class="form-select" name="interest" required>
+      <option value="">— Select a plan —</option>
+      <option>Starter Plan</option>
+      <option>Elite Plan</option>
+      <option>Online Coaching</option>
+      <option>Not sure yet — let's chat</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">My Main Goal</label>
+    <select class="form-select" name="goal" required>
+      <option value="">— Select your goal —</option>
+      <option>Lose Weight / Fat Loss</option>
+      <option>Build Muscle / Strength</option>
+      <option>Improve Fitness / Endurance</option>
+      <option>Body Recomposition</option>
+      <option>Sports Performance</option>
+      <option>General Health & Wellness</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Tell Me About Yourself</label>
+    <textarea 
+      class="form-textarea" 
+      name="message"
+      placeholder="Current fitness level, injuries, schedule..."
+      required
+    ></textarea>
+  </div>
+
+  <!-- Anti-spam -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit" class="form-submit">Send Message →</button>
+
+  <div class="form-success" id="form-success">
+    ✅ Message received! I'll be in touch within 24 hours. Get ready.
+  </div>
+
+</form>
+
+      <div class="map-placeholder">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1542.0304898848199!2d27.859654135048917!3d-26.13752058392282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sza!4v1776500839126!5m2!1sen!2sza" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name"><span>ARMYFIT</span> TRAINING</div>
+          <p class="footer-brand-desc">Elite personal training for people who are serious about change.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('plans')">Plans</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a>@sbonisosikakane1@gamil.com</a></li>
+            <li><a>+27(0) 67 328 2474</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Armyfit Training.</span><span>Built for champions.</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Page switching
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const navEl = document.getElementById('nav-' + name);
+      if (navEl) navEl.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Sticky nav
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Contact form
+    function submitForm() {
+      const first = document.getElementById('f-first').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      if (!first || !email) {
+        alert('Please fill in at least your name and email.');
+        return;
+      }
+      document.getElementById('contact-form').querySelectorAll('input,select,textarea,button').forEach(el => el.disabled = true);
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
